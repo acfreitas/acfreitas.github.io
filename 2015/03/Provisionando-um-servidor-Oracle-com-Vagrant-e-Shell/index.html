@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Provisionando um servidor Oracle com Vagrant e Shell | Antônio Carlos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Recentemente precisei criar um servidor Oracle para testes. Quem já trabalhou ou trabalha com Oracle sabe o quão oneroso é tal atividade. Como não queria passar por isso novamente, resolvi automatizar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Provisionando um servidor Oracle com Vagrant e Shell">
+<meta property="og:url" content="http://acfreitas.com/2015/03/Provisionando-um-servidor-Oracle-com-Vagrant-e-Shell/index.html">
+<meta property="og:site_name" content="Antônio Carlos">
+<meta property="og:description" content="Recentemente precisei criar um servidor Oracle para testes. Quem já trabalhou ou trabalha com Oracle sabe o quão oneroso é tal atividade. Como não queria passar por isso novamente, resolvi automatizar">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Provisionando um servidor Oracle com Vagrant e Shell">
+<meta name="twitter:description" content="Recentemente precisei criar um servidor Oracle para testes. Quem já trabalhou ou trabalha com Oracle sabe o quão oneroso é tal atividade. Como não queria passar por isso novamente, resolvi automatizar">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/scrollUp/image.css" type="text/css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <div class="logo">
+        <img src="/logo.png" alt="Profile Picture">
+      </div>
+      <div id="title">Antônio Carlos</div>
+      
+        <div id="subtitle">QA, Agile Testing and DevOps</div>
+      
+       <ul class="my-socials">
+  
+  <li>
+  	<a href="https://github.com/acfreitas" class="github" target="_blank">
+  		<i class="fa fa-github"></i>
+  	</a>
+  </li>
+  
+ 
+ <li>
+   	<a href="mailto:acarlossw@gmail.com" class="email" target="_blank" title="Email Me">
+  		<i class="fa fa-envelope"></i>
+  	</a>
+ </li>
+ 
+</ul>
+    </div>
+  </div>
+  <div id="header-inner" class="">
+    <nav id="main-nav">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <!--
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Arquivos</a>
+        
+          <a class="main-nav-link" href="/rss2.xml">Feed</a>
+        
+      -->
+    </nav>
+    <nav id="title-nav" style="display:none">
+      <a href="/">Antônio Carlos</a>
+      <span id="title-nav-socials">
+        
+          <a href="https://github.com/acfreitas" class="github" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+        
+       
+          <a href="mailto:acarlossw@gmail.com" class="email" target="_blank" title="Email Me">
+            <i class="fa fa-envelope"></i>
+          </a>
+       
+     </span>
+    </nav>
+    <nav id="sub-nav">
+      
+      <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+    </nav>
+    <div id="search-form-wrap">
+      <form action="http://www.google.com/cse" method="get" accept-charset="utf-8" class="search-form">
+        <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Pesquisar">
+        <input type="submit" value="" class="search-form-submit">
+        <input name=tn type=hidden value="bds">
+        <input name=cl type=hidden value="3">
+        <input name=ct type=hidden value="2097152">
+        <input type="hidden" name="si" value="acfreitas.com">
+      </form>
+    </div>
+  </div>
+  <div class="site-nav" style="display: none;">
+    <ul>
+    
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Arquivos</a></li>
+      
+        <li><a href="/rss2.xml">Feed</a></li>
+      
+    </ul>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="oishi-Provisionando-um-servidor-Oracle-com-Vagrant-e-Shell" class="article article-type-oishi" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/Provisionando-um-servidor-Oracle-com-Vagrant-e-Shell/" class="article-date">
+  <time datetime="2015-03-27T14:35:32.000Z" itemprop="datePublished">27/03/2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Provisionando um servidor Oracle com Vagrant e Shell
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Recentemente precisei criar um servidor Oracle para testes. Quem já trabalhou ou trabalha com Oracle sabe o quão oneroso é tal atividade. Como não queria passar por isso novamente, resolvi automatizar (ainda mais tendo certeza que seria necessário criar novos servidores). </p>
+<a id="more"></a>
+<p>Para criar o servidor usei o <a href="https://www.vagrantup.com/" target="_blank" rel="external">Vagrant</a> e <a href="http://docs.vagrantup.com/v2/provisioning/shell.html" target="_blank" rel="external">Shell</a> como provisioner. Ao procurar uma box na <a href="https://atlas.hashicorp.com/boxes/search" target="_blank" rel="external">Vagrant Cloud</a> encontrei uma com Red Hat 6.5 e o Oracle 11g instalado. A box <a href="https://vagrantcloud.com/bseller/boxes/oracle-standard" target="_blank" rel="external">bseller/oracle-standard</a> continha 14GB de disco, com isso foi necessário <a href="http://acfreitas.com/2015/03/Aumentando-o-disco-com-Vagrant-e-VirtualBox/" target="_blank" rel="external">aumentá-lo</a>.</p>
+<h3 id="Requisitos">Requisitos</h3><p>Primeiro será necessário instalar o <a href="https://www.virtualbox.org/" target="_blank" rel="external">VirtualBox</a> e o <a href="https://www.vagrantup.com/" target="_blank" rel="external">Vagrant</a></p>
+<h3 id="Criando_um_novo_servidor">Criando um novo servidor</h3><p>O projeto completo está no <a href="https://github.com/acfreitas/oraclebox" target="_blank" rel="external">GitHub</a>. Para usá-lo, basta seguir os passos abaixo: </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/acfreitas/oraclebox.git</span><br><span class="line">$ <span class="built_in">cd</span> oraclebox</span><br><span class="line">$ vagrant up</span><br></pre></td></tr></table></figure>
+<p>Após executar o <code>vagrant up</code> o servidor será criado, com o banco <code>tests</code>. Para alterar as configurações do banco criado durante o provisionamento, bastar editar o <a href="https://github.com/acfreitas/oraclebox/blob/master/shell/provision.sh" target="_blank" rel="external">provision.sh</a>. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Connect with user oracle"</span></span><br><span class="line">sudo su <span class="operator">-l</span> oracle</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'Import environment variables'</span></span><br><span class="line"><span class="built_in">export</span> ORACLE_SID=tests</span><br><span class="line"><span class="built_in">export</span> ORACLE_BASE=/u01/app/oracle </span><br><span class="line"><span class="built_in">export</span> ORACLE_HOME=/u01/app/oracle/product/<span class="number">11.2</span>/dbhome_1 </span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$ORACLE_HOME</span>/bin </span><br><span class="line">  </span><br><span class="line"><span class="built_in">echo</span> <span class="string">'Create database Tests'</span></span><br><span class="line"><span class="keyword">if</span> [ ! <span class="operator">-d</span> /u01/app/oracle/oradata/tests ] ; <span class="keyword">then</span></span><br><span class="line">    su -c <span class="string">"dbca -silent -createDatabase -templateName General_Purpose.dbc -gdbName tests -sysPassword 0r4c13b0x -systemPassword 0r4c13b0x -scriptDest /u01/app/oracle/oradata/tests -characterSet WE8ISO8859P1"</span> <span class="operator">-s</span> /bin/sh oracle</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'Start listener'</span></span><br><span class="line">su -c <span class="string">"lsnrctl start"</span> <span class="operator">-s</span> /bin/sh oracle</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'Startup database'</span></span><br><span class="line">su -c <span class="string">"sqlplus /nolog &lt;&lt;EOF</span><br><span class="line">    conn 0r4c13b0x/sys as sysdba</span><br><span class="line">    shutdown immediate;</span><br><span class="line">    startup</span><br><span class="line">    exit</span><br><span class="line">EOF"</span> <span class="operator">-s</span> /bin/sh oracle</span><br></pre></td></tr></table></figure>
+<p><strong><em>Obs.:</em></strong> O comando <a href="http://docs.oracle.com/cd/B28359_01/server.111/b28310/create002.htm" target="_blank" rel="external">DBCA</a> cria um novo banco com o characterSet <code>WE8ISO8859P1</code> e senha <code>0r4c13b0x</code> para os usuários <code>system</code> e <code>sys</code>. Para alterar, basta editar o comando:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dbca -silent -createDatabase -templateName General_Purpose.dbc -gdbName tests -sysPassword <span class="number">0</span>r4c13b0x -systemPassword <span class="number">0</span>r4c13b0x -scriptDest /u01/app/oracle/oradata/tests -characterSet WE8ISO8859P1</span><br></pre></td></tr></table></figure>
+<p>O servidor contém 4GB de memória RAM. Caso queira mudar, bastar editar o <a href="https://github.com/acfreitas/oraclebox/blob/master/Vagrantfile" target="_blank" rel="external">Vagrantfile</a></p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">Vagrant.</span>configure(<span class="number">2</span>) <span class="keyword">do</span> |config|</span><br><span class="line">  config.vm.box = <span class="string">"bseller/oracle-standard"</span></span><br><span class="line">  config.vm.define <span class="symbol">:oracle</span> <span class="keyword">do</span> |oracle| </span><br><span class="line">    oracle.vm.hostname = <span class="string">'oraclebox'</span></span><br><span class="line">    oracle.vm.synced_folder <span class="string">"."</span>, <span class="string">"/vagrant"</span>, <span class="symbol">owner:</span> <span class="string">"oracle"</span>, <span class="symbol">group:</span> <span class="string">"oinstall"</span> </span><br><span class="line">    oracle.vm.network <span class="symbol">:private_network</span>, <span class="symbol">ip:</span> <span class="string">'192.168.33.13'</span></span><br><span class="line">    oracle.vm.network <span class="symbol">:forwarded_port</span>, <span class="symbol">guest:</span> <span class="number">1521</span>, <span class="symbol">host:</span> <span class="number">1521</span></span><br><span class="line">    oracle.vm.provider <span class="symbol">:virtualbox</span> <span class="keyword">do</span> |vb|</span><br><span class="line">       vb.customize [<span class="string">"modifyvm"</span>, <span class="symbol">:id</span>, <span class="string">"--memory"</span>, <span class="string">"4096"</span>]</span><br><span class="line">       vb.customize [<span class="string">"modifyvm"</span>, <span class="symbol">:id</span>, <span class="string">"--name"</span>, <span class="string">"oraclebox"</span>]</span><br><span class="line">       vb.customize [</span><br><span class="line">            <span class="string">'createhd'</span>, </span><br><span class="line">            <span class="string">'--filename'</span>, <span class="string">'disk/oracle'</span>, </span><br><span class="line">            <span class="string">'--format'</span>, <span class="string">'VDI'</span>, </span><br><span class="line">            <span class="string">'--size'</span>, <span class="number">60200</span></span><br><span class="line">            ] </span><br><span class="line">       vb.customize [</span><br><span class="line">            <span class="string">'storageattach'</span>, <span class="symbol">:id</span>, </span><br><span class="line">            <span class="string">'--storagectl'</span>, <span class="string">"SATA"</span>, </span><br><span class="line">            <span class="string">'--port'</span>, <span class="number">1</span>, <span class="string">'--device'</span>, <span class="number">0</span>, </span><br><span class="line">            <span class="string">'--type'</span>, <span class="string">'hdd'</span>, <span class="string">'--medium'</span>, <span class="string">'disk/oracle.vdi'</span></span><br><span class="line">            ]</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    oracle.vm.provision <span class="string">"shell"</span>, <span class="symbol">path:</span> <span class="string">"shell/add-oracle-disk.sh"</span></span><br><span class="line">    oracle.vm.provision <span class="string">"shell"</span>, <span class="symbol">path:</span> <span class="string">"shell/provision.sh"</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="Acessando_o_banco">Acessando o banco</h3><p>Para acessar o banco, você pode usar os parâmetros:</p>
+<ul>
+<li>Host: localhost</li>
+<li>Port: 1521</li>
+<li>SID: tests</li>
+<li>User: system</li>
+<li>Password: 0r4c13b0x</li>
+</ul>
+<p>Caso queira acessar de outra maquina na rede, basta mudar o host para o IP da sua maquina. </p>
+<h3 id="Conclusão">Conclusão</h3><p>Com isso a criação de novos servidores se torna muito simples, rápido, repetível e portável. Assim é possível garantir que problemas de ambiente não aconteçam, como <em>characterset</em>, por exemplo. Além de explorar o poder da virtualização e criar vários servidores com um custo acessível. </p>
+<p>Espero ter ajudado. Abraços!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://acfreitas.com/2015/03/Provisionando-um-servidor-Oracle-com-Vagrant-e-Shell/" data-id="ci91fj4r2000epvrb3ph0i2ud" class="article-share-link">Compartilhar</a>
+      
+
+      
+        <a href="http://acfreitas.com/2015/03/Provisionando-um-servidor-Oracle-com-Vagrant-e-Shell/#disqus_thread" class="article-comment-link">Comentários</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Oracle/">Oracle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vagrant/">Vagrant</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VirtualBox/">VirtualBox</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/04/Aumentando-a-confianca-do-time-com-DevOps/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Recente</strong>
+      <div class="article-nav-title">
+        
+          Aumentando a confiança do time com DevOps
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/03/Aumentando-o-disco-com-Vagrant-e-VirtualBox/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Anterior</strong>
+      <div class="article-nav-title">Aumentando o disco com Vagrant e VirtualBox</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Antônio Carlos<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme <a href="https://github.com/acfreitas/oishi" target="_blank">acfreitas/oishi</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!--
+      <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Arquivos</a>
+  
+    <a href="/rss2.xml" class="mobile-nav-link">Feed</a>
+  
+</nav>
+    -->
+    
+<script>
+  var disqus_shortname = 'acfreitas';
+  
+  var disqus_url = 'http://acfreitas.com/2015/03/Provisionando-um-servidor-Oracle-com-Vagrant-e-Shell/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+<script src="/js/jquery.scrollUp.min.js" type="text/javascript"></script>
+
+<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/scrollUp.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

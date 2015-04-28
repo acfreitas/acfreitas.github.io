@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Qual a diferença entre entrega contínua e deploy contínuo? | Antônio Carlos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Nos últimos anos se tem falado muito sobre entrega contínua e deploy contínuo como importantes práticas ágeis. Porém tenho percebido que muitos confundem os objetivos e formas de implantar cada uma da">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Qual a diferença entre entrega contínua e deploy contínuo?">
+<meta property="og:url" content="http://acfreitas.com/2015/03/Qual-a-diferenca-entre-entrega-continua-e-deploy-continuo/index.html">
+<meta property="og:site_name" content="Antônio Carlos">
+<meta property="og:description" content="Nos últimos anos se tem falado muito sobre entrega contínua e deploy contínuo como importantes práticas ágeis. Porém tenho percebido que muitos confundem os objetivos e formas de implantar cada uma da">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Qual a diferença entre entrega contínua e deploy contínuo?">
+<meta name="twitter:description" content="Nos últimos anos se tem falado muito sobre entrega contínua e deploy contínuo como importantes práticas ágeis. Porém tenho percebido que muitos confundem os objetivos e formas de implantar cada uma da">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/scrollUp/image.css" type="text/css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <div class="logo">
+        <img src="/logo.png" alt="Profile Picture">
+      </div>
+      <div id="title">Antônio Carlos</div>
+      
+        <div id="subtitle">QA, Agile Testing and DevOps</div>
+      
+       <ul class="my-socials">
+  
+  <li>
+  	<a href="https://github.com/acfreitas" class="github" target="_blank">
+  		<i class="fa fa-github"></i>
+  	</a>
+  </li>
+  
+ 
+ <li>
+   	<a href="mailto:acarlossw@gmail.com" class="email" target="_blank" title="Email Me">
+  		<i class="fa fa-envelope"></i>
+  	</a>
+ </li>
+ 
+</ul>
+    </div>
+  </div>
+  <div id="header-inner" class="">
+    <nav id="main-nav">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <!--
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Arquivos</a>
+        
+          <a class="main-nav-link" href="/rss2.xml">Feed</a>
+        
+      -->
+    </nav>
+    <nav id="title-nav" style="display:none">
+      <a href="/">Antônio Carlos</a>
+      <span id="title-nav-socials">
+        
+          <a href="https://github.com/acfreitas" class="github" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+        
+       
+          <a href="mailto:acarlossw@gmail.com" class="email" target="_blank" title="Email Me">
+            <i class="fa fa-envelope"></i>
+          </a>
+       
+     </span>
+    </nav>
+    <nav id="sub-nav">
+      
+      <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+    </nav>
+    <div id="search-form-wrap">
+      <form action="http://www.google.com/cse" method="get" accept-charset="utf-8" class="search-form">
+        <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Pesquisar">
+        <input type="submit" value="" class="search-form-submit">
+        <input name=tn type=hidden value="bds">
+        <input name=cl type=hidden value="3">
+        <input name=ct type=hidden value="2097152">
+        <input type="hidden" name="si" value="acfreitas.com">
+      </form>
+    </div>
+  </div>
+  <div class="site-nav" style="display: none;">
+    <ul>
+    
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Arquivos</a></li>
+      
+        <li><a href="/rss2.xml">Feed</a></li>
+      
+    </ul>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="oishi-Qual-a-diferenca-entre-entrega-continua-e-deploy-continuo" class="article article-type-oishi" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/Qual-a-diferenca-entre-entrega-continua-e-deploy-continuo/" class="article-date">
+  <time datetime="2015-03-20T12:04:23.000Z" itemprop="datePublished">20/03/2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Qual a diferença entre entrega contínua e deploy contínuo?
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Nos últimos anos se tem falado muito sobre <a href="http://martinfowler.com/books/continuousDelivery.html" target="_blank" rel="external">entrega contínua</a> e <a href="http://guide.agilealliance.org/guide/cd.html" target="_blank" rel="external">deploy contínuo</a> como importantes práticas ágeis. Porém tenho percebido que muitos confundem os objetivos e formas de implantar cada uma das práticas (e confesso, que também já me enganei). Pois existem algumas coisas em comum entre as duas práticas, como: são uma extensão da <a href="http://www.martinfowler.com/articles/continuousIntegration.html" target="_blank" rel="external">integração contínua</a>, dependem de automação, da colaboração entre as equipes de operações, desenvolvimento e QA, tem um pipeline, visam diminuir os ciclos de feedbacks, aumentam os feedbacks, diminuem os riscos de uma entrega, aumentam a qualidade e confiança do projeto, aumentam a frequência de entrega de valor ao usuário, diminuem os ciclos de respostas as mudanças e etc.</p>
+<a id="more"></a>
+<p>Segundo a <a href="http://www.thoughtworks.com/" target="_blank" rel="external">ThoughtWorks</a>,</p>
+<blockquote>
+<p>Entrega Contínua é uma disciplina de desenvolvimento na qual software é construído de tal maneira que o mesmo <em>pode ser colocado em produção a qualquer momento</em>.</p>
+</blockquote>
+<p>Já Jez <a href="https://twitter.com/jezhumble" target="_blank" rel="external">Humble</a> define deploy contínuo como: </p>
+<blockquote>
+<p>Deploy contínuo é a prática de ir para produção de forma automatizada sempre que um novo commit passar com sucesso pela pipeline de entrega, <em>sem nenhum passo manual</em>.</p>
+</blockquote>
+<p>A grande diferença fica por conta da decisão de quando disponibilizar uma nova versão para o cliente. Na entrega contínua você sempre terá uma versão <em>candidata</em> para publicação após cada commit passar pela pipeline de integração contínua e a decisão parte do negócio, onde o processo de entrega é automatizado e depende de uma ação humana para colocar uma nova versão no ar. Tal ação humana, normalmente, é a escolha da versão e o ambiente que será feito o deploy (testes, homologação ou produção, por exemplo). </p>
+<p>Já no deploy contínuo, você tem vários deploys por dia, horas e até minutos. Um bom exemplo disso foi implantado pelo <a href="http://pt.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr" target="_blank" rel="external">Flickr</a> e <a href="http://timothyfitz.com/2009/02/10/continuous-deployment-at-imvu-doing-the-impossible-fifty-times-a-day/" target="_blank" rel="external">IMVU</a> . E isso, normalmente, é feito se um commit passar por todos os estágios da pipeline de implantação.  </p>
+<p>E como decidir qual abordagem utilizar? Para isso você pode fazer algumas perguntas, como: </p>
+<ul>
+<li>Alguma ação humana é necessária? Exemplo: Testes exploratórios, testes de confirmação, apresentação para o cliente, aprovação do cliente e etc. </li>
+<li>Eu estou entregando valor a cada versão? </li>
+<li>A implantação de uma nova versão depende do negócio? Exemplo: implantações só podem ser feitas depois do horário comercial. </li>
+</ul>
+<p>Últimamente tenho trabalhado na implantação da entrega contínua e, sem dúvidas, é um esfoço muito benéfico para todos envolvidos no projeto.</p>
+<p>Abraços! </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://acfreitas.com/2015/03/Qual-a-diferenca-entre-entrega-continua-e-deploy-continuo/" data-id="ci91fj4qs0005pvrbuvzc88l0" class="article-share-link">Compartilhar</a>
+      
+
+      
+        <a href="http://acfreitas.com/2015/03/Qual-a-diferenca-entre-entrega-continua-e-deploy-continuo/#disqus_thread" class="article-comment-link">Comentários</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Agile/">Agile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Deploy-Continuo/">Deploy Contínuo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Entrega-Continua/">Entrega Contínua</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Integracao-Continua/">Integração Contínua</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/03/Aumentando-o-disco-com-Vagrant-e-VirtualBox/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Recente</strong>
+      <div class="article-nav-title">
+        
+          Aumentando o disco com Vagrant e VirtualBox
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/02/Vagrant-Warning-Connection-timeout-Retrying/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Anterior</strong>
+      <div class="article-nav-title">Vagrant - Warning: Connection timeout. Retrying...</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Antônio Carlos<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme <a href="https://github.com/acfreitas/oishi" target="_blank">acfreitas/oishi</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!--
+      <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Arquivos</a>
+  
+    <a href="/rss2.xml" class="mobile-nav-link">Feed</a>
+  
+</nav>
+    -->
+    
+<script>
+  var disqus_shortname = 'acfreitas';
+  
+  var disqus_url = 'http://acfreitas.com/2015/03/Qual-a-diferenca-entre-entrega-continua-e-deploy-continuo/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+<script src="/js/jquery.scrollUp.min.js" type="text/javascript"></script>
+
+<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/scrollUp.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
