@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Antônio Carlos]]></title>
   <subtitle><![CDATA[QA, Agile Testing and DevOps]]></subtitle>
-  <link href="/rss.xml" rel="self"/>
+  <link href="/rss2.xml" rel="self"/>
   <link href="http://acfreitas.com/"/>
   <updated>2015-04-28T15:56:46.000Z</updated>
   <id>http://acfreitas.com/</id>
