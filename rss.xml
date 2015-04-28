@@ -4,7 +4,7 @@
   <subtitle><![CDATA[QA, Agile Testing and DevOps]]></subtitle>
   <link href="/rss.xml" rel="self"/>
   <link href="http://acfreitas.com/"/>
-  <updated>2015-04-28T14:48:47.000Z</updated>
+  <updated>2015-04-28T15:03:32.000Z</updated>
   <id>http://acfreitas.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://acfreitas.com/2015/04/O-Impacto-da-adocao-de-DevOps-na-qualidade/"/>
     <id>http://acfreitas.com/2015/04/O-Impacto-da-adocao-de-DevOps-na-qualidade/</id>
     <published>2015-04-28T13:27:03.000Z</published>
-    <updated>2015-04-28T14:48:47.000Z</updated>
+    <updated>2015-04-28T15:03:32.000Z</updated>
     <content type="html"><![CDATA[<p>Após algum tempo trabalhando como QA, recentemente descobri o <strong><em>buzzword</em></strong> DevOps e desde então venho estudando o assunto. No último domingo aconteceu em Goiânia o FLISOL e eu tive a oportunidade de falar um pouco sobre DevOps e QA.  </p>
 <h3 id="Espera_aí,_o_que_é_DevOps?">Espera aí, o que é DevOps?</h3><p>DevOps é uma metodologia/cultura/movimento/conceito/filosofia (sim, não é trivial definir o que é o <a href="http://gutocarvalho.net/octopress/2013/03/16/o-que-e-um-devops-afinal/" target="_blank" rel="external">DevOps</a>) de desenvolvimento de software baseada na comunicação, colaboração e integração entre cliente, desenvolvimento, operação e qualidade.<br>DevOps visa a independência de cada equipe citada acima, desenvolvendo software e obtendo feedbacks de novas releases mais rapidamente. Para isso, um dos objetivos do DevOps é automatizar os processos relacionados a integração e entrega de uma nova release, dando maior flexibilidade, agilidade e <a href="http://acfreitas.com/2015/04/Aumentando-a-confianca-do-time-com-DevOps/" target="_blank" rel="external">confiança</a> no que foi implementado</p>
 <a id="more"></a>
@@ -31,7 +31,7 @@
 <li>Iterações curtas: Como a automação dos processos manuais relacionados a entrega de novas releases, cada iteração é encurtada, podendo chegar em até várias implantações por dia. Isso reduz o risco de uma grande alteração.</li>
 <li>Feedback: DevOps torna possível ter feedbacks rápidos de cada release disponibilizada no ambiente de produção. </li>
 <li>Gerência de configuração: Para adoção do DevOps gerência de configuração se torna algo extremamente necessário e maduro, diminuindo os problemas relacionados à tal disciplina. </li>
-<li>Testes Automatizados: Testes automatizados se faz necessário para que se possoa entregar um nova release de forma segura e confiável.</li>
+<li>Testes Automatizados: Testes automatizados se faz necessário para que se possa entregar uma nova release de forma segura e confiável.</li>
 </ul>
 <p>Segue abaixo o slide da apresentação realizada no FLISOL Goiânia 2015</p>
 <center><iframe src="//pt.slideshare.net/slideshow/embed_code/key/uEVcD7mw2mOLSG" width="599" height="487" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//pt.slideshare.net/AntnioCarlos27/impacto-da-adoo-de-dev-ops-na-qualidade-47457323" title="O Impacto da adoção de DevOps na qualidade" target="_blank">O Impacto da adoção de DevOps na qualidade</a> </strong> from <strong><a href="//www.slideshare.net/AntnioCarlos27" target="_blank">Antônio Carlos</a></strong> </div></center>
