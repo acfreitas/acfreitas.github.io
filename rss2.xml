@@ -4,7 +4,7 @@
   <subtitle><![CDATA[QA, Agile Testing and DevOps]]></subtitle>
   <link href="/rss2.xml" rel="self"/>
   <link href="http://acfreitas.com/"/>
-  <updated>2015-04-29T17:35:02.000Z</updated>
+  <updated>2015-04-29T17:36:11.000Z</updated>
   <id>http://acfreitas.com/</id>
   
   <author>
@@ -19,10 +19,10 @@
     <link href="http://acfreitas.com/2015/04/O-Impacto-da-adocao-de-DevOps-na-qualidade/"/>
     <id>http://acfreitas.com/2015/04/O-Impacto-da-adocao-de-DevOps-na-qualidade/</id>
     <published>2015-04-28T13:27:03.000Z</published>
-    <updated>2015-04-29T17:35:02.000Z</updated>
+    <updated>2015-04-29T17:36:11.000Z</updated>
     <content type="html"><![CDATA[<p>Após algum tempo trabalhando como QA, recentemente descobri o <strong><em>buzzword</em></strong> DevOps e desde então venho estudando o assunto. No último sábado, 25/04, aconteceu em Goiânia o FLISOL e eu tive a oportunidade de falar um pouco sobre DevOps e QA.  </p>
-<h3 id="Espera_aí,_o_que_é_DevOps?">Espera aí, o que é DevOps?</h3><p>DevOps é uma metodologia/cultura/movimento/conceito/filosofia (sim, não é trivial definir o que é o <a href="http://gutocarvalho.net/octopress/2013/03/16/o-que-e-um-devops-afinal/" target="_blank" rel="external">DevOps</a>) de desenvolvimento de software baseada na comunicação, colaboração e integração entre cliente, desenvolvimento, operação e qualidade.<br>DevOps visa a independência de cada equipe citada acima, desenvolvendo software e obtendo feedbacks de novas releases mais rapidamente. Para isso, um dos objetivos do DevOps é automatizar os processos relacionados a integração e entrega de uma nova release, dando maior flexibilidade, agilidade e <a href="http://acfreitas.com/2015/04/Aumentando-a-confianca-do-time-com-DevOps/" target="_blank" rel="external">confiança</a> no que foi implementado</p>
-<p><img src="/images/O-Impacto-da-adocao-de-DevOps-na-qualidade.png" alt="DevOps"></p>
+<h3 id="Espera_aí,_o_que_é_DevOps?">Espera aí, o que é DevOps?</h3><p><img src="/images/O-Impacto-da-adocao-de-DevOps-na-qualidade.png" alt="DevOps"></p>
+<p>DevOps é uma metodologia/cultura/movimento/conceito/filosofia (sim, não é trivial definir o que é o <a href="http://gutocarvalho.net/octopress/2013/03/16/o-que-e-um-devops-afinal/" target="_blank" rel="external">DevOps</a>) de desenvolvimento de software baseada na comunicação, colaboração e integração entre cliente, desenvolvimento, operação e qualidade.<br>DevOps visa a independência de cada equipe citada acima, desenvolvendo software e obtendo feedbacks de novas releases mais rapidamente. Para isso, um dos objetivos do DevOps é automatizar os processos relacionados a integração e entrega de uma nova release, dando maior flexibilidade, agilidade e <a href="http://acfreitas.com/2015/04/Aumentando-a-confianca-do-time-com-DevOps/" target="_blank" rel="external">confiança</a> no que foi implementado</p>
 <a id="more"></a>
 <h3 id="O_Impacto_do_DevOps_na_Qualidade">O Impacto do DevOps na Qualidade</h3><p>O ganho na qualidade com a adoção do DevOps se deve a vários fatores, principalmente:</p>
 <ul>
@@ -41,8 +41,8 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>Após algum tempo trabalhando como QA, recentemente descobri o <strong><em>buzzword</em></strong> DevOps e desde então venho estudando o assunto. No último sábado, 25/04, aconteceu em Goiânia o FLISOL e eu tive a oportunidade de falar um pouco sobre DevOps e QA.  </p>
-<h3 id="Espera_aí,_o_que_é_DevOps?">Espera aí, o que é DevOps?</h3><p>DevOps é uma metodologia/cultura/movimento/conceito/filosofia (sim, não é trivial definir o que é o <a href="http://gutocarvalho.net/octopress/2013/03/16/o-que-e-um-devops-afinal/">DevOps</a>) de desenvolvimento de software baseada na comunicação, colaboração e integração entre cliente, desenvolvimento, operação e qualidade.<br>DevOps visa a independência de cada equipe citada acima, desenvolvendo software e obtendo feedbacks de novas releases mais rapidamente. Para isso, um dos objetivos do DevOps é automatizar os processos relacionados a integração e entrega de uma nova release, dando maior flexibilidade, agilidade e <a href="http://acfreitas.com/2015/04/Aumentando-a-confianca-do-time-com-DevOps/">confiança</a> no que foi implementado</p>
-<p><img src="/images/O-Impacto-da-adocao-de-DevOps-na-qualidade.png" alt="DevOps"></p>]]>
+<h3 id="Espera_aí,_o_que_é_DevOps?">Espera aí, o que é DevOps?</h3><p><img src="/images/O-Impacto-da-adocao-de-DevOps-na-qualidade.png" alt="DevOps"></p>
+<p>DevOps é uma metodologia/cultura/movimento/conceito/filosofia (sim, não é trivial definir o que é o <a href="http://gutocarvalho.net/octopress/2013/03/16/o-que-e-um-devops-afinal/">DevOps</a>) de desenvolvimento de software baseada na comunicação, colaboração e integração entre cliente, desenvolvimento, operação e qualidade.<br>DevOps visa a independência de cada equipe citada acima, desenvolvendo software e obtendo feedbacks de novas releases mais rapidamente. Para isso, um dos objetivos do DevOps é automatizar os processos relacionados a integração e entrega de uma nova release, dando maior flexibilidade, agilidade e <a href="http://acfreitas.com/2015/04/Aumentando-a-confianca-do-time-com-DevOps/">confiança</a> no que foi implementado</p>]]>
     
     </summary>
     
