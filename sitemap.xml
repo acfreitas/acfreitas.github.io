@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://acfreitas.com/2015/04/O-Impacto-da-adocao-de-DevOps-na-qualidade/</loc>
-    <lastmod>2015-04-29T17:24:09.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://acfreitas.com/2015/03/Provisionando-um-servidor-Oracle-com-Vagrant-e-Shell/</loc>
-    <lastmod>2015-04-28T14:48:35.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://acfreitas.com/2015/03/Aumentando-o-disco-com-Vagrant-e-VirtualBox/</loc>
-    <lastmod>2015-04-28T14:48:15.000Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://acfreitas.com/2015/02/Vagrant-Warning-Connection-timeout-Retrying/</loc>
-    <lastmod>2015-04-28T13:14:25.000Z</lastmod>
+    <lastmod>2015-04-29T17:35:02.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://acfreitas.com/2015/03/Qual-a-diferenca-entre-entrega-continua-e-deploy-continuo/</loc>
-    <lastmod>2015-04-28T13:14:25.000Z</lastmod>
+    <lastmod>2015-04-29T17:35:02.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://acfreitas.com/2015/03/Provisionando-um-servidor-Oracle-com-Vagrant-e-Shell/</loc>
+    <lastmod>2015-04-29T17:35:02.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://acfreitas.com/2015/04/O-Impacto-da-adocao-de-DevOps-na-qualidade/</loc>
+    <lastmod>2015-04-29T17:35:02.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://acfreitas.com/2015/02/Criando-um-blog-com-GitHub-Pages-e-Hexo-em-menos-de-10-passos/</loc>
-    <lastmod>2015-04-28T13:14:25.000Z</lastmod>
+    <lastmod>2015-04-29T17:35:02.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://acfreitas.com/2015/03/Aumentando-o-disco-com-Vagrant-e-VirtualBox/</loc>
+    <lastmod>2015-04-29T17:35:02.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://acfreitas.com/2015/04/Aumentando-a-confianca-do-time-com-DevOps/</loc>
-    <lastmod>2015-04-28T13:14:25.000Z</lastmod>
+    <lastmod>2015-04-29T17:35:02.000Z</lastmod>
   </url>
   
 </urlset>
