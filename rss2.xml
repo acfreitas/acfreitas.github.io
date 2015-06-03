@@ -4,7 +4,7 @@
   <subtitle><![CDATA[QA, Agile Testing and DevOps]]></subtitle>
   <link href="/rss2.xml" rel="self"/>
   <link href="http://acfreitas.com/"/>
-  <updated>2015-06-03T16:48:11.000Z</updated>
+  <updated>2015-05-06T14:53:23.000Z</updated>
   <id>http://acfreitas.com/</id>
   
   <author>
@@ -13,44 +13,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://acfreitas.com/2015/06/Criando-um-blog-com-GitHub-Pages-e-Hexo-em-menos-de-10-passos/"/>
-    <id>http://acfreitas.com/2015/06/Criando-um-blog-com-GitHub-Pages-e-Hexo-em-menos-de-10-passos/</id>
-    <published>2015-06-03T16:48:11.000Z</published>
-    <updated>2015-06-03T16:48:11.000Z</updated>
-    <content type="html"><![CDATA[<p>-layout: oishi<br>-title: Criando um blog com GitHub Pages e Hexo em menos de 10 passos<br>-date: 2015-02-06 10:44:46<br>-tags:<br>— GitHub        </p>
-<h2 id="—_Hexo">— Hexo        </h2><p>-Já pensou em criar um site/blog em menos 10 minutos? De forma fácil, grátis e com deployment continuous?        </p>
-<ul>
-<li>-<a id="more"></a><br>-Em um bate-papo com um grande amigo e frontender <a href="http://villander.github.io" target="_blank" rel="external">Michael Villander</a> onde discutíamos algumas ferramentas e a grande importância sobre os profissionais da nossa área contribuírem com a comunidade (um ótimo assunto pra mais tarde) decidi criar um artigo ensinado você criar um blog de forma fácil e espero que, com isso, você possa contribuir/divulgar/aprender/testar algo legal.        </li>
-<li>-Pois bem, o GitHub tem um serviço excepcional, o <a href="https://pages.github.com/" target="_blank" rel="external">GitHub Pages</a>. Onde você pode hospedar páginas estáticas,ac com JavaScript, HTML, CSS e imagens. Com ele você pode criar o seu blog baseado nos templates existentes ou utilizar algum framework como <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a> (pra você que é Jedi em JavaScript) ou <a href="http://jekyllrb.com/" target="_blank" rel="external">Jekyll</a> (pra você que se diverte com Ruby). Como usei o Hexo, vamos utilizá-lo neste post.        </li>
-<li>-Blá, blá, blá…. Vamos ao que interessa, né?!         </li>
-<li>-1 - Crie um novo repositório no GitHub com o padrão <code>usarname.github.io</code>, pois será o domínio que o GitHub Pages vai usar e você também poderá colocar um <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/" target="_blank" rel="external">domínio próprio</a> e faça clone do repositório        </li>
-<li>-2 - Instale o Hexo com o comando <code>$ npm install hexo -g</code> (vale lembrar que você vai precisar do Node.js e Git instalados)        </li>
-<li>-3 - Inicialize o Hexo com o comando <code>$ hexo init username.github.io</code>, acesse o repositório e faça o build com <code>$ npm install</code>        </li>
-<li>-4 - Configure o seu arquivo <code>_config.yml</code> com as informações do seu blog e em deploy, adicione o repositório criado anteriormente<br>-```<br>-# Deployment<br>-## Docs: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">http://hexo.io/docs/deployment.html</a><br>-deploy:        </li>
-<li>type: github        </li>
-<li>repository: git@github.com:usarname/usarname.github.io.git<br>-```        </li>
-<li>-5 - Crie seu primeiro post com <code>$ hexo new [layout] &lt;title&gt;</code>  onde <code>[layout]</code> você irá usar <a href="https://github.com/hexojs/hexo-theme-landscape" target="_blank" rel="external">landscape</a>, que vem por padrão com o Hexo, e o título do post        </li>
-<li>-6 - Para gerar os arquivos estáticos, execute <code>$ hexo generate</code>        </li>
-<li>-7 - O seu primeiro post foi gerado, agora execute <code>$ hexo server</code> para testar e acesse a url <code>localhost:4000</code>        </li>
-<li>-8 Se estiver tudo ok, faça o deploy com <code>$ hexo deploy</code> e acesse o site com a URL <code>https://username.github.io</code> e voilà!!!         </li>
-<li>-O primeiro deploy leva algum tempo, algo em trono de 30 minutos segundo o GitHub. E ainda assim, não se preocupe, pois os próximos serão praticamente instâneos a cada commit, e como prometido, nosso site está com o tão desejado deployment continuous e com menos de 10 passos. Fácil, não?         </li>
-<li></li>
-<li>-### Notas         </li>
-<li>-<em> Nosso arquivo de configuração é um <a href="http://en.wikipedia.org/wiki/YML" target="_blank" rel="external">YML</a>, que diferentemente do json, usa a indentação<br>-</em> Certifique-se que seu e-mail e chave SSH estão válidos no GitHub         </li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>-layout: oishi<br>-title: Criando um blog com GitHub Pages e Hexo em menos de 10 passos<br>-date: 2015-02-06 10:44:46<br>-tags:<br>— GitHub        </p>
-<h2 id="—_Hexo">— Hexo        </h2><p>-Já pensou em criar um site/blog em menos 10 minutos? De forma fácil, grátis e com deployment continuous?        </p>
-<ul>
-<li>-]]>
-    
-    </summary>
-    
-  </entry>
   
   <entry>
     <title><![CDATA[O Impacto da adoção de DevOps na qualidade]]></title>
