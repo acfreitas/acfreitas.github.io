@@ -1,0 +1,83 @@
+/* Centralizando o conteúdo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Fundo branco */
+    color: #333; /* Cor do texto padrão */
+}
+
+header {
+    background-color: #49000C; /* Vermelho para o cabeçalho */
+    color: white; /* Texto em branco */
+    padding: 20px 0;
+    text-align: center;
+}
+
+#pending-vaccines {
+    max-width: 800px; /* Limita a largura do conteúdo */
+    margin: 20px auto; /* Centraliza o conteúdo */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff; /* Fundo branco */
+}
+
+/* Estilizando os títulos */
+.age-title {
+    color: #49000C; /* Vermelho para os títulos */
+    font-weight: bold; /* Negrito */
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Estilo dos itens de vacina */
+.vaccine-item {
+    margin: 10px 0;
+}
+
+/* Estilo do botão */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00332A; /* Verde para o botão */
+    color: white; /* Texto em branco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838; /* Verde escuro ao passar o mouse */
+}
+
+.button-container {
+    margin-top: 30px; /* Espaçamento entre o conteúdo e o botão */
+    margin-bottom: 50px; /* Espaçamento entre o botão e o rodapé */
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #49000C; /* Vermelho para o rodapé */
+    color: white; /* Texto em branco */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons i {
+    margin: 0 10px; /* Espaço entre os ícones */
+    color: white; /* Cor dos ícones */
+    transition: color 0.3s;
+}
+
+.footer-icons i:hover {
+    color: #FAD8AA; /* Cor ao passar o mouse nos ícones */
+}
+

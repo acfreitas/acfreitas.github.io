@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Vacinação - Immunify</title>
+    <link rel="stylesheet" href="calendario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Calendário de Vacinação</h1>
+    </header>
+
+    <div id="calendar">
+        <div class="calendar-header">
+            <h2 id="monthYear">Mês/Ano</h2>
+            <button onclick="prevMonth()">Anterior</button>
+            <button onclick="nextMonth()">Próximo</button>
+        </div>
+        <div class="days-of-week">
+            <div>Dom</div>
+            <div>Seg</div>
+            <div>Ter</div>
+            <div>Qua</div>
+            <div>Qui</div>
+            <div>Sex</div>
+            <div>Sab</div>
+        </div>
+        <div class="days" id="days">
+            <!-- Dias serão gerados aqui -->
+        </div>
+
+        <div class="button-container">
+            <button onclick="showRegisterModal()">Registrar Vacina</button>
+            <button onclick="showPendingVaccines()">Vacinas Pendentes</button>
+        </div>
+    </div>
+
+    <!-- Modal para registrar vacina -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3>Registrar Vacina</h3>
+            <form onsubmit="registerVaccine(event)">
+                <label for="date">Data:</label>
+                <input type="date" id="date" required>
+                <label for="vaccine">Vacina:</label>
+                <input type="text" id="vaccine" required>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-icons">
+            <span>@immunify</span>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+
+    <script src="calendario.js"></script>
+</body>
+</html>

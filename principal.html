@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immunify</title>
+    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="C:/Users/aclhi/Downloads/LOGO - Immunify .png" alt="Logo Immunify" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="pagina_inicial.html">Página Inicial</a></li>
+                <li><a href="configuracoes.html">Configurações</a></li>
+                <li><a href="novo_cadastro.html">Novo Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <div class="intro-content">
+            <h2>Apresentando o Immunify: Simplifique a Gestão das Vacinas dos Seus Filhos</h2>
+            <p>Facilitamos para que os papais mantenham os registros de vacinação dos filhos atualizados com uma carteira digital, lembretes automáticos e registro completo das vacinas. Assim, fica fácil acompanhar e garantir a proteção da saúde das crianças sem preocupação com a perda de cartões físicos ou esquecimentos.</p>
+        </div>
+    </section>
+
+    <div class="notification" id="notification">
+        <button class="close-btn" onclick="closeNotification()">×</button>
+        <p>Permitir notificações?</p>
+        <label><i class="fas fa-envelope"></i><input type="checkbox" id="email" name="notification"> Receber por E-mail</label>
+        <label><i class="fab fa-whatsapp"></i><input type="checkbox" id="whatsapp" name="notification"> Receber por WhatsApp</label>
+    </div>
+
+    <section id="hero">
+        <h2>Gerencie as vacinas do seu filho</h2>
+        <a href="calendario.html" class="button">Calendário de Vacinação</a>
+    </section>
+
+    <section id="info">
+        <h3>Informações Importantes</h3>
+        <ul>
+            <li>
+                <img src="C:/Users/aclhi/Downloads/syringe-1974677_640.jpg" class="info-img">
+                <a href="cuidados_pos_vacinacao.html">Cuidados Pós-Vacinas: Dicas sobre como cuidar do seu filho após a vacinação.</a>
+            </li>
+            <li>
+                <img src="C:/Users/aclhi/Downloads/pensive-young-caucasian-woman-lab-coat-holding-phone.jpg" alt="Verificação de Aptidão" class="info-img">
+                <a href="aptidao.html">Verificação de Aptidão: Saiba se está apto para tomar uma vacina específica.</a>
+            </li>
+            <li>
+                <img src="C:/Users/aclhi/Downloads/edificio-do-hospital.jpg" alt="Postinhos de Saúde" class="info-img">
+                <a href="postinho.html">Postinhos de Saúde: Encontre o posto de saúde mais próximo.</a>   
+            </li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Immunify. Todos os direitos reservados.</p>
+        <div class="footer-icons">
+            <span>@immunify</span>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+
+    <script>
+        function closeNotification() {
+            document.getElementById("notification").style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacinas Pendentes - Immunify</title>
+    <link rel="stylesheet" href="vacinas_pendentes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Vacinas Pendentes</h1>
+    </header>
+
+    <div id="pending-vaccines">
+        <div class="vaccine-age">
+            <h2 style="color: #49000C;">Ao nascer</h2>
+            <ul>
+                <li><input type="checkbox" id="bcg" name="bcg"><label for="bcg"> BCG</label> - Tuberculose (formas graves)</li>
+                <li><input type="checkbox" id="hepatiteB" name="hepatiteB"><label for="hepatiteB"> Hepatite B</label> - Hepatite B</li>
+            </ul>
+        </div>
+
+        <div class="vaccine-age">
+            <h2 style="color: #49000C;">2 meses</h2>
+            <ul>
+                <li><input type="checkbox" id="penta" name="penta"><label for="penta"> Penta (Difteria, Tétano, Coqueluche, Haemophilus influenzae B e Hepatite B)</label> - 3 doses</li>
+                <li><input type="checkbox" id="poliomielite" name="poliomielite"><label for="poliomielite"> Poliomielite (VIP)</label> - 3 doses</li>
+                <li><input type="checkbox" id="pneumo10" name="pneumo10"><label for="pneumo10"> Pneumocócica 10-valente (Pneumo 10)</label> - 3 doses</li>
+            </ul>
+        </div>
+
+        <div class="vaccine-age">
+            <h2 style="color: #49000C;">4 meses</h2>
+            <ul>
+                <li><input type="checkbox" id="penta2" name="penta2"><label for="penta2"> Penta - 2ª dose</label></li>
+            </ul>
+        </div>
+
+        <div class="vaccine-age">
+            <h2 style="color: #49000C;">6 meses</h2>
+            <ul>
+                <li><input type="checkbox" id="penta3" name="penta3"><label for="penta3"> Penta - 3ª dose</label></li>
+                <li><input type="checkbox" id="poliomielite2" name="poliomielite2"><label for="poliomielite2"> Poliomielite - 2ª dose</label></li>
+                <li><input type="checkbox" id="pneumo102" name="pneumo102"><label for="pneumo102"> Pneumocócica 10-valente - 2ª dose</label></li>
+            </ul>
+        </div>
+
+        <div class="vaccine-age">
+            <h2 style="color: #49000C;">12 meses</h2>
+            <ul>
+                <li><input type="checkbox" id="tripliceViral" name="tripliceViral"><label for="tripliceViral"> Tríplice viral (Sarampo, Caxumba e Rubéola) - 1ª dose</label></li>
+                <li><input type="checkbox" id="varicela" name="varicela"><label for="varicela"> Varicela (Catapora) - 1ª dose</label></li>
+            </ul>
+        </div>
+
+        <div class="vaccine-age">
+            <h2 style="color: #49000C;">15 meses</h2>
+            <ul>
+                <li><input type="checkbox" id="hepatiteA" name="hepatiteA"><label for="hepatiteA"> Hepatite A - 1ª dose</label></li>
+            </ul>
+        </div>
+
+        <div class="vaccine-age">
+            <h2 style="color: #49000C;">4 anos</h2>
+            <ul>
+                <li><input type="checkbox" id="tripliceViral4" name="tripliceViral4"><label for="tripliceViral4"> Tríplice viral - 3ª dose</label></li>
+                <li><input type="checkbox" id="varicela4" name="varicela4"><label for="varicela4"> Varicela - 3ª dose</label></li>
+            </ul>
+        </div>
+
+        <div class="vaccine-age">
+            <h2 style="color: #49000C;">11 anos</h2>
+            <ul>
+                <li><input type="checkbox" id="tetano" name="tetano"><label for="tetano"> Tétano - 1 dose</label></li>
+                <li><input type="checkbox" id="difteria" name="difteria"><label for="difteria"> Difteria - 1 dose</label></li>
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <button onclick="goBack()">Voltar ao Calendário</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-icons">
+            <span>@immunify</span>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.history.back(); // Volta para a página anterior (Calendário)
+        }
+    </script>
+</body>
+</html>

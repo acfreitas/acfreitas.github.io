@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Novo Cadastro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='novo_cadastro.css'>
+    <script src='main.js'></script>
+    <style>
+        .filho {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Novo Cadastro de Vacinação Infantil</h1>
+        <form action="/cadastro-crianca" method="POST">
+
+            <!-- Dados do Responsável -->
+            <h2>Dados do Responsável</h2>
+
+            <!-- Nome do Responsável -->
+            <label for="responsavel-nome">Nome completo do Responsável:</label>
+            <input type="text" id="responsavel-nome" name="responsavel_nome" placeholder="Digite o nome completo:" required>
+
+            <!-- CPF do Responsável -->
+            <label for="responsavel-cpf">CPF do Responsável:</label>
+            <input type="text" id="responsavel-cpf" name="responsavel_cpf" placeholder="Digite o CPF do responsável:" required>
+
+            <!-- Número do Responsável -->
+            <label for="responsavel-telefone">Telefone de Contato:</label>
+            <input type="tel" id="responsavel-telefone" name="responsavel_telefone" placeholder="Digite o número de telefone:" required>
+
+            <!-- Dados das Crianças -->
+            <h2>Dados das Crianças</h2>
+            <div id="filhos-container">
+                <div class="filho">
+                    <h3>Filho 1</h3>
+                    <label for="crianca-nome">Nome Completo da Criança:</label>
+                    <input type="text" id="crianca-nome" name="crianca_nome[]" placeholder="Digite o nome completo da criança:" required>
+
+                    <!-- Data de Nascimento -->
+                    <label for="crianca-data-nascimento">Data de Nascimento:</label>
+                    <input type="date" id="crianca-data-nascimento" name="crianca_data_nascimento[]" required>
+
+                    <!-- CPF da Criança (se aplicável) -->
+                    <label for="crianca-cpf">CPF da Criança (se aplicável):</label>
+                    <input type="text" id="crianca-cpf" name="crianca_cpf[]" placeholder="Digite o CPF da criança (opcional):">
+
+                    <!-- Endereço -->
+                    <label for="crianca-endereco">Endereço:</label>
+                    <input type="text" id="crianca-endereco" name="crianca_endereco[]" placeholder="Digite o endereço da criança:" required>
+
+                    <!-- Alergias -->
+                    <label for="crianca-alergia">Alergias:</label>
+                    <input type="text" id="crianca-alergia" name="crianca_alergia[]" placeholder="Digite as alergias da criança (se houver):">
+                </div>
+            </div>
+            <button type="button" onclick="adicionarFilho()">Adicionar Filho</button><br><br>
+
+            <!-- Vacina a ser aplicada -->
+            <label for="vacina-tipo">Vacina a ser Aplicada:</label>
+            <select id="vacina-tipo" name="vacina_tipo" required>
+                <option value="">Selecione a vacina:</option>
+                <option value="BCG">BCG</option>
+                <option value="Hepatite B">Hepatite B</option>
+                <option value="Pentavalente">Pentavalente</option>
+                <option value="Rotavírus">Rotavírus</option>
+                <option value="Poliomielite">Poliomielite</option>
+            </select>
+
+            <!-- Data Prevista da Vacinação -->
+            <label for="vacina-data">Data Prevista da Vacinação:</label>
+            <input type="date" id="vacina-data" name="vacina_data" required>
+
+            <!-- Lote da Vacina -->
+            <label for="vacina-lote">Lote da Vacina:</label>
+            <input type="text" id="vacina-lote" name="vacina_lote" placeholder="Digite o número do lote:" required>
+
+            <!-- Local de Vacinação -->
+            <label for="vacina-local">Local de Vacinação:</label>
+            <input type="text" id="vacina-local" name="vacina_local" placeholder="Nome da unidade de saúde:" required>
+
+            <!-- Nome do Profissional de Saúde -->
+            <label for="profissional-nome">Nome do Profissional de Saúde:</label>
+            <input type="text" id="profissional-nome" name="profissional_nome" placeholder="Nome do profissional que aplicou a vacina" required>
+
+            <!-- Botão de Enviar -->
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <script>
+        let filhoCount = 1; // Contador para identificar os filhos
+
+        function adicionarFilho() {
+            filhoCount++; // Incrementa o contador
+            const container = document.getElementById("filhos-container");
+            const novoFilho = document.createElement("div");
+            novoFilho.classList.add("filho");
+            novoFilho.innerHTML = `
+                <h3>Filho ${filhoCount}</h3>
+                <label for="crianca-nome">Nome Completo da Criança:</label>
+                <input type="text" name="crianca_nome[]" placeholder="Digite o nome completo da criança:" required>
+
+                <label for="crianca-data-nascimento">Data de Nascimento:</label>
+                <input type="date" name="crianca_data_nascimento[]" required>
+
+                <label for="crianca-cpf">CPF da Criança (se aplicável):</label>
+                <input type="text" name="crianca_cpf[]" placeholder="Digite o CPF da criança (opcional):">
+
+                <label for="crianca-endereco">Endereço:</label>
+                <input type="text" name="crianca_endereco[]" placeholder="Digite o endereço da criança:" required>
+
+                <label for="crianca-alergia">Alergias:</label>
+                <input type="text" name="crianca_alergia[]" placeholder="Digite as alergias da criança (se houver):">
+            `;
+            container.appendChild(novoFilho); // Adiciona o novo filho ao container
+        }
+    </script>
+</body>
+
+</html>

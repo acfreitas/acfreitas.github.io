@@ -1,0 +1,103 @@
+/* Definição de cores */
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --deep-green: #00332A;
+    --dark-red: #49000C;
+    --light-beige: #FAD8AA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Gradiente de fundo mais sutil */
+    background: linear-gradient(135deg, rgba(73, 0, 12, 0.8), rgba(250, 216, 170, 0.8));
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--black);
+}
+
+
+
+/* Container da tela de login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Caixa de login */
+.login-box {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--black);
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    color: var(--black);
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    background-color: gainsboro;
+    font-size: 16px;
+    outline: none;
+}
+
+input::placeholder {
+    color: var(--black);
+    opacity: 0.7;
+}
+
+/* Botão de login */
+button.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--deep-green);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.login-btn:hover {
+    background-color: #218838;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo da logo */
+.logo {
+    width: 100px; /* Tamanho da logo */
+    margin-bottom: 20px;
+}
